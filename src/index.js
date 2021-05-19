@@ -1,1 +1,2 @@
-import "./linked-list/test";
+// import "./linked-list/test";
+import "./doubly-linked-list/test";
