@@ -105,4 +105,37 @@ export default class DoublyLinkedList {
 
     return true;
   }
+
+  /** 查找元素在链表中的索引，没有则返回-1 */
+  indexOf(value) {
+    let index = 0;
+    let pointer = this.head;
+
+    while (pointer) {
+      if (pointer.value === value) {
+        return index;
+      }
+      index++;
+      pointer = pointer.next;
+    }
+
+    return -1;
+  }
+
+  remove(value) {
+    const position = this.indexOf(value);
+    return this.removeAt(position);
+  }
+
+  toString() {
+    let pointer = this.head;
+    let str = "";
+
+    while (pointer) {
+      str += `, ${pointer.value}`;
+      pointer = pointer.next;
+    }
+
+    return str.slice(2);
+  }
 }
