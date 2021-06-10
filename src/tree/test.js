@@ -1,4 +1,13 @@
-import { dfs, bfs, preOrder, inOrder, postOrder } from "./index";
+import {
+  dfs,
+  bfs,
+  preOrder,
+  preOrder2,
+  inOrder,
+  inOrder2,
+  postOrder,
+  postOrder2
+} from "./index";
 
 const tree = {
   val: "a",
@@ -37,19 +46,27 @@ const binaryTree = {
   left: {
     val: 2,
     left: {
-      val: 4
+      val: 4,
+      left: null,
+      right: null
     },
     right: {
-      val: 5
+      val: 5,
+      left: null,
+      right: null
     }
   },
   right: {
     val: 3,
     left: {
-      val: 6
+      val: 6,
+      left: null,
+      right: null
     },
     right: {
-      val: 7
+      val: 7,
+      left: null,
+      right: null
     }
   }
 };
@@ -59,7 +76,10 @@ const binaryTree = {
 // bfs(tree);
 
 // preOrder(binaryTree);
+// preOrder2(binaryTree);
 
 // inOrder(binaryTree);
+// inOrder2(binaryTree);
 
-postOrder(binaryTree);
+// postOrder(binaryTree);
+postOrder2(binaryTree);
