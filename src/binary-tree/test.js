@@ -10,4 +10,8 @@ bst.addValue(8);
 bst.addValue(4);
 
 bst.traverse();
-bst.search(8);
+const minNode = bst.findMinNode();
+const found = bst.contains(8);
+console.log("min: " + minNode.value);
+console.log("found: " + found);
+bst.remove(4);

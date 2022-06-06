@@ -71,6 +71,7 @@ const preOrder2 = (root) => {
  * 2. 访问根节点
  * 3. 对根节点的右子树进行中序遍历
  */
+
 const inOrder = (root) => {
   if (!root) return;
   inOrder(root.left);

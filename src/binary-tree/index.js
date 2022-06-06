@@ -31,17 +31,29 @@ class Node {
     }
   }
 
-  search(value) {
+  findMin() {
+    if (!this.left) return this;
+    return this.left.findMin();
+  }
+
+  find(value) {
     if (value === this.value) {
       return this;
     }
-    if (value < this.value && this.left) {
-      return this.left.search(value);
+    if (this.left && value < this.value) {
+      return this.left.find(value);
     }
-    if (value > this.value && this.right) {
-      return this.right.search(value);
+    if (this.right && value > this.value) {
+      return this.right.find(value);
     }
     return null;
+  }
+
+  remove(node) {
+    console.log(node);
+    if (!node) {
+      throw new Error("item not found");
+    }
   }
 }
 
@@ -63,12 +75,17 @@ export default class Tree {
     this.root.visit();
   }
 
-  search(value) {
-    const found = this.root.search(value);
-    if (found) {
-      console.log("Found:" + found.value);
-    } else {
-      console.log(value + " not found");
-    }
+  findMinNode() {
+    if (!this.root) return null;
+    return this.root.findMin();
+  }
+
+  contains(value) {
+    return !!this.root.find(value);
+  }
+
+  remove(value) {
+    const node = this.root.find(value);
+    this.root.remove(node);
   }
 }

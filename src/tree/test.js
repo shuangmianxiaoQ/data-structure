@@ -46,28 +46,28 @@ const binaryTree = {
   left: {
     val: 2,
     left: {
-      val: 4,
+      val: 3,
       left: null,
       right: null
     },
     right: {
-      val: 5,
-      left: null,
-      right: null
+      val: 4,
+      left: {
+        val: 5,
+        left: null,
+        right: null
+      },
+      right: {
+        val: 6,
+        left: null,
+        right: null
+      }
     }
   },
   right: {
-    val: 3,
-    left: {
-      val: 6,
-      left: null,
-      right: null
-    },
-    right: {
-      val: 7,
-      left: null,
-      right: null
-    }
+    val: 7,
+    left: null,
+    right: null
   }
 };
 
@@ -78,8 +78,8 @@ const binaryTree = {
 // preOrder(binaryTree);
 // preOrder2(binaryTree);
 
-// inOrder(binaryTree);
+inOrder(binaryTree);
 // inOrder2(binaryTree);
 
 // postOrder(binaryTree);
-postOrder2(binaryTree);
+// postOrder2(binaryTree);
