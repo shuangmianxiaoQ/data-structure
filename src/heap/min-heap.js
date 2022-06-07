@@ -48,7 +48,7 @@ export default class MinHeap {
     return this.heap[0];
   }
 
-  length() {
+  size() {
     return this.heap.length;
   }
 }

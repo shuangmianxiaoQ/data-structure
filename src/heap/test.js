@@ -15,4 +15,4 @@ heap.pop();
 
 console.log(heap);
 console.log(heap.peek());
-console.log(heap.length());
+console.log(heap.size());
