@@ -11,7 +11,6 @@ const selectionSort = (arr) => {
       [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
     }
   }
-  return arr;
 };
 
 export default selectionSort;
