@@ -12,12 +12,12 @@ const merge = (left, right) => {
   return res.concat(left, right);
 };
 
-const mergeSort = (nums) => {
-  const len = nums.length;
-  if (len === 1) return nums;
+const mergeSort = (arr) => {
+  const len = arr.length;
+  if (len === 1) return arr;
   const midIdx = len >> 1;
-  const left = nums.slice(0, midIdx);
-  const right = nums.slice(midIdx);
+  const left = arr.slice(0, midIdx);
+  const right = arr.slice(midIdx);
   // 递归拆分子数组，直到分成只有一个数的数组
   return merge(mergeSort(left), mergeSort(right));
 };

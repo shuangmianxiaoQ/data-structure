@@ -1,6 +1,7 @@
 import bubbleSort from "./bubble";
 import insertionSort from "./insertion";
 import mergeSort from "./merge";
+import quickSort from "./quick";
 import selectionSort from "./selection";
 
 const arr1 = [5, 1, 1, 2, 0, 0];
@@ -17,3 +18,7 @@ console.log(arr3, "insertionSort");
 
 const arr4 = [5, 1, 1, 2, 0, 0];
 console.log(mergeSort(arr4), "mergeSort");
+
+const arr5 = [29, 10, 14, 37, 14];
+quickSort(arr5);
+console.log(arr5, "qucikSort");
