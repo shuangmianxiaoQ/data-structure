@@ -3,4 +3,5 @@
 // import "./tree/test";
 // import "./binary-tree/test";
 // import "./heap/test";
-import "./sort/test";
+// import "./sort/test";
+import "./search/test";
