@@ -21,8 +21,8 @@ console.log(lru.cache, "lru");
 
 // 扩容
 lru.capacity = 4;
+lru.put(4, 6);
 lru.put(5, 5);
-lru.put(6, 6);
 
 console.log(lru.cache, "扩容 lru");
 

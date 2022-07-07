@@ -52,10 +52,13 @@ class LRUCache {
    * @param {*} value
    */
   put(key, value) {
-    if (this.cache.size === this.#capacity) {
-      this.#removeLeastRecentlyUsed();
+    if (this.cache.has(key)) {
+      this.cache.delete(key);
     }
     this.cache.set(key, value);
+    if (this.cache.size > this.#capacity) {
+      this.#removeLeastRecentlyUsed();
+    }
   }
 }
 
