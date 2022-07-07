@@ -5,4 +5,5 @@
 // import "./heap/test";
 // import "./sort/test";
 // import "./search/test";
-import "./2d-array-dfs/test";
+// import "./2d-array-dfs/test";
+import "./lru/test";
